@@ -1,6 +1,6 @@
 import Button from "./Button";
 import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
-import { IoMdNotificationsOutline } from "react-icons/Io";
+import { RiNotification4Line } from "react-icons/Ri";
 import { MdFilterList } from "react-icons/Md";
 function TopSetting() {
   return (
@@ -16,7 +16,7 @@ function TopSetting() {
         </div>
         <div className="text-xl flex gap-4 items-center ">
           <AiOutlineSearch />
-          <IoMdNotificationsOutline />
+          <RiNotification4Line />
           <div className="border-2 p-1 rounded-full">
             <AiOutlineUser />
           </div>

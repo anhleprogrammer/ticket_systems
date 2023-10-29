@@ -1,6 +1,5 @@
 import { AiFillHome, AiOutlineFolderView } from "react-icons/ai";
 import { BsFillPeopleFill } from "react-icons/bs";
-import { TbCircleLetterV } from "react-icons/Tb";
 import { SiSimpleanalytics } from "react-icons/si";
 
 function Navbar() {
@@ -21,7 +20,7 @@ function Navbar() {
         </div>
       </div>
       <div className="mb-4 flex justify-center text-white text-4xl">
-        <TbCircleLetterV />
+        <p>V</p>
       </div>
     </div>
   );

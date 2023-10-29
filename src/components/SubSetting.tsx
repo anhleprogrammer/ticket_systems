@@ -1,4 +1,4 @@
-import { TbFilterCog } from "react-icons/Tb";
+import { AiFillFilter } from "react-icons/ai";
 function SubSetting() {
   return (
     <div
@@ -36,7 +36,8 @@ function SubSetting() {
           <button className="border px-2 hover:cursor-pointer">&gt;</button>
         </div>
         <button className="border px-2 text-xl   hover:cursor-pointer">
-          <TbFilterCog />
+          {/* <TbFilterCog /> */}
+          <AiFillFilter />
         </button>
       </div>
     </div>
