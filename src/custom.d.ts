@@ -1,4 +1,4 @@
 declare module "react-icons" {
-  const noTypesYet: any>;
+  const noTypesYet: any;
   export default noTypesYet;
 }

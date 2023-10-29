@@ -3,8 +3,6 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import { TbCircleLetterV } from "react-icons/Tb";
 import { SiSimpleanalytics } from "react-icons/si";
 
-import { IconType } from "react-icons";
-
 function Navbar() {
   return (
     <div className="flex flex-col justify-between h-full text-2xl bg-cyan-800	w-16 [&>div]:text-gray-300 [&>div]:hover:cursor-pointer ">
