@@ -1,0 +1,43 @@
+const tickets = [
+  {
+    id: 1,
+    name: "Bob",
+    subject: "Where is my order?",
+    created: "2 minutes ago",
+    status: "Pending",
+    priority: "Low",
+    Description: "I cannot see my order, please assist me",
+    Agent: "Anh Le",
+  },
+  {
+    id: 2,
+    name: "West",
+    subject: "Email address change",
+    created: "12 minutes ago",
+    status: "Open",
+    priority: "High",
+    Description: "I need assist with changing email address",
+    Agent: "Anh Le",
+  },
+  {
+    id: 3,
+    name: "Sarah",
+    subject: "Payment failed",
+    created: "6 minutes ago",
+    status: "Pending",
+    priority: "Medium",
+    Description: "I cannot process my payment",
+    Agent: "Anh Le",
+  },
+  {
+    id: 4,
+    name: "Emily",
+    subject: "Missing items",
+    created: "2 minutes ago",
+    status: "Pending",
+    priority: "Low",
+    Description: "My order has missing items",
+    Agent: "Anh Le",
+  },
+];
+export { tickets };

@@ -1,7 +1,7 @@
 import TicketCard from "./TicketCard";
 function Body() {
   return (
-    <div>
+    <div className="bg-gray-100 h-full p-4">
       <TicketCard />
     </div>
   );
