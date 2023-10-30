@@ -6,7 +6,6 @@ function TicketCard() {
         <input type="checkbox" />
         <p className="border px-4 py-2 border-black rounded flex-grow-1">A</p>
         <div>
-          <p>adf</p>
           <p className="hover:cursor-pointer">
             Payment failed <a>#2</a>
           </p>
