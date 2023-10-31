@@ -1,5 +1,8 @@
 import Select from "./Select";
 function TicketCard() {
+  const priority_opts = ["Low", "Medium", "High"];
+  const status_opts = ["Open", "Pending", "Resolved"];
+
   return (
     <div className="flex text-sm justify-between bg-white p-4 ">
       <div className="flex justify-between gap-4 text-sm items-center">
@@ -18,14 +21,11 @@ function TicketCard() {
       </div>
       <div className="mr-24">
         <div>
-          <Select />
-        </div>
-        <div>
-          <p>Escalation</p>
+          <Select options={priority_opts} />
         </div>
 
         <div>
-          <p>Pending</p>
+          <Select options={status_opts} />
         </div>
       </div>
     </div>
