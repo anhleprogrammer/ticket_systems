@@ -3,17 +3,37 @@ import Modal from "./Modal";
 type ModalProps = {
   options: string[];
 };
-function Select({ options }: ModalProps) {
+function getOptionColor(option) {
+  switch (option) {
+    case "Low":
+      return "bg-green-500";
+    case "Medium":
+      return "bg-yellow-500";
+    case "High":
+      return "bg-red-500";
+    default:
+      return "";
+  }
+}
+function Select({ options, value }: ModalProps) {
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open);
   };
   return (
     <div
-      className="relative flex items-center gap-4 hover:cursor-default"
+      className="relative flex items-center gap-4 hover:cursor-default justify-between mb-2"
       onClick={handleClick}
     >
-      Select
+      <div className="flex items-center">
+        <a
+          className={`${getOptionColor(
+            value
+          )} px-1 py-1 text-[0.2rem] rounded mr-2`}
+        ></a>
+        <a>{value}</a>
+      </div>
+
       <svg
         width="18px"
         height="18px"

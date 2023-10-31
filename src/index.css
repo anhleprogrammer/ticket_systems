@@ -13,4 +13,12 @@
   -webkit-text-size-adjust: 100%;
  }
 
- 
+ .ticket-name {
+  width: 2.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+ }
+ .ticket-select {
+  width: 8rem;
+ }
