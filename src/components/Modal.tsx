@@ -1,6 +1,7 @@
-import React from "react";
-
-function Modal({ options }) {
+type ModalProps = {
+  options: string[];
+};
+function Modal({ options }: ModalProps) {
   return (
     <div className="bg-white right-8.5 top-5 absolute z-10 rounded-sm shadow">
       {options &&

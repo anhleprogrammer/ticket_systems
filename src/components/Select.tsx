@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Modal from "./Modal";
-function Select({ options }) {
+type ModalProps = {
+  options: string[];
+};
+function Select({ options }: ModalProps) {
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen(!open);
