@@ -15,16 +15,12 @@ function SubSetting() {
           className="bg-gray-50 hover:cursor-pointer"
           name="sort"
           id="sort"
+          value={sortOption}
+          onChange={(e) => setSort(e.target.value)}
         >
-          <option name="date" value={sortOption}>
-            Date created
-          </option>
-          <option name="time" value={sortOption}>
-            Resolved time
-          </option>
-          <option name="priority" value={sortOption}>
-            Priority
-          </option>
+          <option value="date">Date created</option>
+          <option value="resolve">Resolved time</option>
+          <option value="priority">Priority</option>
         </select>
       </div>
       <div className="right">

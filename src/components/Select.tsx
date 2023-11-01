@@ -33,8 +33,11 @@ function Select({ options, value }: SelectProps) {
     setOpen(!open);
   };
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (selectRef.current && !selectRef.current.contains(event.target)) {
+    const handleClickOutside = (event: React.MouseEvent<HTMLButtonElement>) => {
+      if (
+        selectRef.current &&
+        !(selectRef.current as HTMLElement).contains(event.target as Node)
+      ) {
         setOpen(false);
       }
     };
