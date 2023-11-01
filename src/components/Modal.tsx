@@ -1,5 +1,7 @@
-import { useState } from "react";
-
+// import { useState } from "react";
+interface ModalProps {
+  options: string[];
+}
 function getOptionColor(option: string) {
   switch (option) {
     case "Low":
@@ -12,7 +14,7 @@ function getOptionColor(option: string) {
       return "";
   }
 }
-function Modal({ options }: string[]) {
+function Modal({ options }: ModalProps) {
   // const [select, setSelect] = useState();
   return (
     <div
@@ -20,7 +22,7 @@ function Modal({ options }: string[]) {
     px-2"
     >
       {options &&
-        options.map((option) => (
+        options.map((option: string) => (
           <div className="flex items-center hover:bg-gray-200 rounded my-1 p-1">
             <a
               className={`${getOptionColor(
