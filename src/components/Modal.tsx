@@ -1,9 +1,6 @@
 import { useState } from "react";
-type ModalProps = {
-  options: string[];
-};
 
-function getOptionColor(option) {
+function getOptionColor(option: string) {
   switch (option) {
     case "Low":
       return "bg-green-500";
@@ -15,8 +12,8 @@ function getOptionColor(option) {
       return "";
   }
 }
-function Modal({ options }: ModalProps) {
-  const [select, setSelect] = useState();
+function Modal({ options }: string[]) {
+  // const [select, setSelect] = useState();
   return (
     <div
       className="flex flex-col w-32 overflow-hidden bg-white right-8.5 top-5 absolute z-10 rounded-md shadow 

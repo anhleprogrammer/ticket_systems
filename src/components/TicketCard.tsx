@@ -1,5 +1,19 @@
 import Select from "./Select";
-function TicketCard({ ticket }) {
+interface Ticket {
+  id: number;
+  name: string;
+  subject: string;
+  created: string;
+  status: string;
+  priority: string;
+  description: string;
+  agent: string;
+}
+
+interface TicketCardProps {
+  ticket: Ticket;
+}
+function TicketCard({ ticket }: TicketCardProps) {
   const priority_opts = ["Low", "Medium", "High"];
   const status_opts = ["Open", "Pending", "Resolved"];
 

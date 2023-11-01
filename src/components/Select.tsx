@@ -2,8 +2,9 @@ import { useState } from "react";
 import Modal from "./Modal";
 type ModalProps = {
   options: string[];
+  value: String;
 };
-function getOptionColor(option) {
+function getOptionColor(option: string) {
   switch (option) {
     case "Low":
       return "bg-green-500";
