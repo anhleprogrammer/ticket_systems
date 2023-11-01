@@ -1,5 +1,5 @@
 import Select from "./Select";
-interface Ticket {
+type Ticket = {
   id: number;
   name: string;
   subject: string;
@@ -8,11 +8,11 @@ interface Ticket {
   priority: string;
   description: string;
   agent: string;
-}
+};
 
-interface TicketCardProps {
+type TicketCardProps = {
   ticket: Ticket;
-}
+};
 function TicketCard({ ticket }: TicketCardProps) {
   const priority_opts = ["Low", "Medium", "High"];
   const status_opts = ["Open", "Pending", "Resolved"];

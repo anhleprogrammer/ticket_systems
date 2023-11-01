@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { AiFillFilter } from "react-icons/ai";
 function SubSetting() {
+  const [sortOption, setSort] = useState("date");
   return (
     <div
       className="bg-gray-50 py-4 px-7 flex justify-between
@@ -14,10 +16,15 @@ function SubSetting() {
           name="sort"
           id="sort"
         >
-          <option value="date">Date created</option>
-          <option value="resolve">Resolved time</option>
-
-          <option value="priority">Priority</option>
+          <option name="date" value={sortOption}>
+            Date created
+          </option>
+          <option name="time" value={sortOption}>
+            Resolved time
+          </option>
+          <option name="priority" value={sortOption}>
+            Priority
+          </option>
         </select>
       </div>
       <div className="right">
@@ -36,7 +43,6 @@ function SubSetting() {
           <button className="border px-2 hover:cursor-pointer">&gt;</button>
         </div>
         <button className="border px-2 text-xl   hover:cursor-pointer">
-          {/* <TbFilterCog /> */}
           <AiFillFilter />
         </button>
       </div>

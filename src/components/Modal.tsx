@@ -1,7 +1,7 @@
-// import { useState } from "react";
-interface ModalProps {
+type ModalProps = {
   options: string[];
-}
+  setSelect: (value: string) => void;
+};
 function getOptionColor(option: string) {
   switch (option) {
     case "Low":
@@ -14,8 +14,7 @@ function getOptionColor(option: string) {
       return "";
   }
 }
-function Modal({ options }: ModalProps) {
-  // const [select, setSelect] = useState();
+function Modal({ options, setSelect }: ModalProps) {
   return (
     <div
       className="flex flex-col w-32 overflow-hidden bg-white right-8.5 top-5 absolute z-10 rounded-md shadow 
@@ -29,7 +28,12 @@ function Modal({ options }: ModalProps) {
                 option
               )} px-1 py-1 text-[0.2rem] rounded mr-2`}
             ></a>
-            <a className="rounded-sm hover:cursor-pointer w-full">{option}</a>{" "}
+            <a
+              onClick={() => setSelect(option)}
+              className="rounded-sm hover:cursor-pointer w-full"
+            >
+              {option}
+            </a>{" "}
           </div>
         ))}
     </div>

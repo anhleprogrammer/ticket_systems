@@ -40,7 +40,7 @@ const tickets = [
     agent: "Anh Le",
   },
   {
-    id: 4,
+    id: 5,
     name: "Zac",
     subject: "Missing items",
     created: "7 minutes ago",
@@ -50,7 +50,7 @@ const tickets = [
     agent: "Anh Le",
   },
   {
-    id: 5,
+    id: 6,
     name: "John",
     subject: "Delayed delivery",
     created: "10 minutes ago",
@@ -60,7 +60,7 @@ const tickets = [
     agent: "Jessica Smith",
   },
   {
-    id: 6,
+    id: 7,
     name: "Ivan",
     subject: "Wrong product received",
     created: "15 minutes ago",
@@ -70,7 +70,7 @@ const tickets = [
     agent: "Michael Johnson",
   },
   {
-    id: 7,
+    id: 8,
     name: "David",
     subject: "Billing discrepancy",
     created: "20 minutes ago",
@@ -80,7 +80,7 @@ const tickets = [
     agent: "Emily Thompson",
   },
   {
-    id: 8,
+    id: 9,
     name: "Sophia",
     subject: "Product return request",
     created: "25 minutes ago",
@@ -90,7 +90,7 @@ const tickets = [
     agent: "Daniel Miller",
   },
   {
-    id: 9,
+    id: 10,
     name: "Oliver",
     subject: "Account access issue",
     created: "30 minutes ago",
@@ -100,7 +100,7 @@ const tickets = [
     agent: "Emma Wilson",
   },
   {
-    id: 10,
+    id: 11,
     name: "Ava",
     subject: "Defective product",
     created: "35 minutes ago",
