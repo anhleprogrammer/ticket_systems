@@ -2,7 +2,7 @@ import { useState } from "react";
 import Modal from "./Modal";
 type ModalProps = {
   options: string[];
-  value: String;
+  value: string;
 };
 function getOptionColor(option: string) {
   switch (option) {
