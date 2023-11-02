@@ -9,12 +9,25 @@ const priorityInNumber: { [key: string]: number } = {
 };
 function Body() {
   const { sortOption } = useContext(SortContext);
-  if (sortOption === "priority") {
-    tickets.sort(
-      (a, b) => priorityInNumber[a.priority] - priorityInNumber[b.priority]
+  if (sortOption.option === "priority") {
+    tickets.sort((a, b) =>
+      sortOption.order === "asc"
+        ? priorityInNumber[a.priority] - priorityInNumber[b.priority]
+        : priorityInNumber[b.priority] - priorityInNumber[a.priority]
     );
-  } else if (sortOption === "status") {
-    tickets.sort((a, b) => a.status.localeCompare(b.status));
+  } else if (sortOption.option === "status") {
+    tickets.sort((a, b) =>
+      sortOption.order === "asc"
+        ? a.status.localeCompare(b.status)
+        : b.status.localeCompare(a.status)
+    );
+  } else {
+    tickets.sort((a, b) => {
+      const dateA = new Date(a.created).getTime();
+      const dateB = new Date(b.created).getTime();
+
+      return sortOption.order === "asc" ? dateB - dateA : dateA - dateB;
+    });
   }
   return (
     <div className="bg-gray-100 h-full p-4  overflow-auto">

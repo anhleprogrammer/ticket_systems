@@ -1,19 +1,22 @@
 import { createContext, useState } from "react";
 
-type SortContextType = {
-  sortOption: string;
-  setSortOption: (sortOption: string) => void;
+export type SortContextType = {
+  sortOption: any;
+  setSortOption: (sortOption: any) => void;
 };
 
 //create a context object with default value
 
 export const SortContext = createContext<SortContextType>({
-  sortOption: "",
+  sortOption: { option: "", order: "asc" },
   setSortOption: () => {},
 });
 
 export const SortProvider = ({ children }: any) => {
-  const [sortOption, setSortOption] = useState("date");
+  const [sortOption, setSortOption] = useState({
+    option: "date",
+    order: "asc",
+  });
 
   return (
     <SortContext.Provider value={{ sortOption, setSortOption }}>

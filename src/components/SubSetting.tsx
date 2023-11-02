@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AiFillFilter } from "react-icons/ai";
 import { SortContext } from "../contexts/SortContext";
-
+import { FcGenericSortingAsc, FcGenericSortingDesc } from "react-icons/fc";
 function SubSetting() {
   const { sortOption, setSortOption } = useContext(SortContext);
 
@@ -18,13 +18,39 @@ function SubSetting() {
           className="bg-gray-50 hover:cursor-pointer"
           name="sort"
           id="sort"
-          value={sortOption}
-          onChange={(e) => setSortOption(e.target.value)}
+          value={sortOption.option}
+          onChange={(e) =>
+            setSortOption((prev: any) => ({
+              ...prev,
+              option: e.target.value,
+            }))
+          }
         >
           <option value="date">Date created</option>
           <option value="status">Status</option>
           <option value="priority">Priority</option>
         </select>
+        {sortOption.order === "asc" ? (
+          <FcGenericSortingAsc
+            className="text-xl hover:cursor-pointer "
+            onClick={() =>
+              setSortOption((prev: any) => ({
+                ...prev,
+                order: "desc",
+              }))
+            }
+          />
+        ) : (
+          <FcGenericSortingDesc
+            className="text-xl hover:cursor-pointer"
+            onClick={() =>
+              setSortOption((prev: any) => ({
+                ...prev,
+                order: "asc",
+              }))
+            }
+          />
+        )}
       </div>
       <div className="right">
         <p>Layout: </p>
