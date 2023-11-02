@@ -1,4 +1,5 @@
 import Select from "./Select";
+import dateUtils from "../utils/dateUtils";
 type Ticket = {
   id: number;
   name: string;
@@ -33,7 +34,7 @@ function TicketCard({ ticket }: TicketCardProps) {
           <div className="flex gap-2">
             <p className="hover:cursor-pointer">{ticket.name}</p>
             <p>|</p>
-            <p>Created: {ticket.created}</p>
+            <p>Created: {dateUtils(ticket.created)}</p>
           </div>
         </div>
       </div>

@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { AiFillFilter } from "react-icons/ai";
+import { SortContext } from "../contexts/SortContext";
+
 function SubSetting() {
-  const [sortOption, setSort] = useState("date");
+  const { sortOption, setSortOption } = useContext(SortContext);
+
   return (
     <div
       className="bg-gray-50 py-4 px-7 flex justify-between
@@ -16,10 +19,10 @@ function SubSetting() {
           name="sort"
           id="sort"
           value={sortOption}
-          onChange={(e) => setSort(e.target.value)}
+          onChange={(e) => setSortOption(e.target.value)}
         >
           <option value="date">Date created</option>
-          <option value="resolve">Resolved time</option>
+          <option value="status">Status</option>
           <option value="priority">Priority</option>
         </select>
       </div>
