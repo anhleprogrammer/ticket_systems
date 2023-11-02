@@ -3,7 +3,7 @@ const tickets = [
     id: 1,
     name: "Bob",
     subject: "Where is my order?",
-    created: "10/31/2023, 8:03:00 AM",
+    created: "11/1/2023, 8:03:00 AM",
     status: "Pending",
     priority: "Low",
     description: "I cannot see my order, please assist me",

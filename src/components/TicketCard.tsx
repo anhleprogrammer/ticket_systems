@@ -1,5 +1,5 @@
 import Select from "./Select";
-import dateUtils from "../utils/dateUtils";
+import dateUtils from "../utils/dateUtils.tsx";
 type Ticket = {
   id: number;
   name: string;
