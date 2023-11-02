@@ -1,5 +1,5 @@
 function dateUtils(inputDate) {
-  const currentDateTime = new Date();
+  let currentDateTime = new Date();
   inputDate = new Date(inputDate);
   const yearDiff = currentDateTime.getYear() - inputDate.getYear();
   const monthDiff = currentDateTime.getMonth() - inputDate.getMonth();
@@ -8,7 +8,11 @@ function dateUtils(inputDate) {
   let result = "";
   if (yearDiff < 1) {
     if (monthDiff > 0) {
-      result = monthDiff + " month(s) ago";
+      if (monthDiff > 1) result = monthDiff + " month(s) ago";
+      else {
+        if (dayDiff > 30) result = monthDiff + " month(s) ago";
+        else result = dayDiff + " day(s) ago";
+      }
     } else {
       if (dayDiff > 0) {
         result = dayDiff + " day(s) ago";
@@ -26,5 +30,5 @@ function dateUtils(inputDate) {
   console.log(result);
   return result;
 }
-dateUtils("11/1/2023, 8:03:00 AM");
+dateUtils("10/31/2023, 8:03:00 AM");
 export default dateUtils;
