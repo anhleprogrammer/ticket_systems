@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { AiFillFilter } from "react-icons/ai";
 import { SortContext } from "../contexts/SortContext";
 

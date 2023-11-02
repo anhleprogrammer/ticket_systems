@@ -1,7 +1,7 @@
-function dateUtils(inputDate) {
+function dateUtils(inputDate: any) {
   let currentDateTime = new Date();
   inputDate = new Date(inputDate);
-  const yearDiff = currentDateTime.getYear() - inputDate.getYear();
+  const yearDiff = currentDateTime.getFullYear() - inputDate.getFullYear();
   const monthDiff = currentDateTime.getMonth() - inputDate.getMonth();
   const dayDiff = currentDateTime.getDate() - inputDate.getDate();
   const hourDiff = currentDateTime.getHours() - inputDate.getHours();

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
 type SortContextType = {
   sortOption: string;
@@ -12,7 +12,7 @@ export const SortContext = createContext<SortContextType>({
   setSortOption: () => {},
 });
 
-export const SortProvider: React.FC = ({ children }: any) => {
+export const SortProvider = ({ children }: any) => {
   const [sortOption, setSortOption] = useState("date");
 
   return (

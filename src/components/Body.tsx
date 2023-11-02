@@ -2,13 +2,13 @@ import TicketCard from "./TicketCard";
 import { tickets } from "../data/tickets";
 import { SortContext } from "../contexts/SortContext";
 import { useContext } from "react";
-const priorityInNumber = {
+const priorityInNumber: { [key: string]: number } = {
   Low: 0,
   Medium: 1,
   High: 2,
 };
 function Body() {
-  const { sortOption, setSortOption } = useContext(SortContext);
+  const { sortOption } = useContext(SortContext);
   if (sortOption === "priority") {
     tickets.sort(
       (a, b) => priorityInNumber[a.priority] - priorityInNumber[b.priority]
