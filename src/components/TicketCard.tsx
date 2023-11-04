@@ -1,5 +1,7 @@
 import Select from "./Select";
 import dateUtils from "../utils/dateUtils.tsx";
+import { TicketDataContext } from "../contexts/TicketDataContext";
+import { useContext } from "react";
 type Ticket = {
   id: number;
   name: string;
@@ -9,6 +11,7 @@ type Ticket = {
   priority: string;
   description: string;
   agent: string;
+  checked: boolean;
 };
 
 type TicketCardProps = {
@@ -17,11 +20,24 @@ type TicketCardProps = {
 function TicketCard({ ticket }: TicketCardProps) {
   const priority_opts = ["Low", "Medium", "High"];
   const status_opts = ["Open", "Pending", "Resolved"];
-
+  const { ticketsState, setTickets } = useContext(TicketDataContext);
+  const handleCheck = (id: number) => {
+    const newTickets = ticketsState.map((ticket: any) => {
+      if (ticket.id === id) {
+        return { ...ticket, checked: !ticket.checked };
+      }
+      return ticket;
+    });
+    setTickets(newTickets);
+  };
   return (
     <div className="card flex text-sm justify-between  p-4 bg-white mb-2">
       <div className="flex justify-between gap-4 text-sm items-center">
-        <input type="checkbox" />
+        <input
+          type="checkbox"
+          checked={ticket.checked}
+          onChange={() => handleCheck(ticket.id)}
+        />
 
         <p className="ticket-name w-4 border px-4 py-2 border-black rounded">
           {ticket.name.charAt(0)}

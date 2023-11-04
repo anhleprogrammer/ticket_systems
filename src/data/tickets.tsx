@@ -109,7 +109,6 @@ const tickets = [
     description: "The product I received is defective, need a replacement",
     agent: "Benjamin Davis",
   },
-  // Rest of the array elements...
 ];
 
 export { tickets };

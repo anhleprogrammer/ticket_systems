@@ -1,10 +1,19 @@
 import { useContext } from "react";
 import { AiFillFilter } from "react-icons/ai";
 import { SortContext } from "../contexts/SortContext";
+import { TicketDataContext } from "../contexts/TicketDataContext";
+
 import { FcGenericSortingAsc, FcGenericSortingDesc } from "react-icons/fc";
 function SubSetting() {
   const { sortOption, setSortOption } = useContext(SortContext);
-
+  const { ticketsState, setTickets } = useContext(TicketDataContext);
+  const handleCheckAll = () => {
+    const newTickets = ticketsState.map((ticket :any) => ({
+      ...ticket,
+      checked: !ticket.checked,
+    }));
+    setTickets(newTickets);
+  };
   return (
     <div
       className="bg-gray-50 py-4 px-7 flex justify-between
@@ -12,7 +21,7 @@ function SubSetting() {
     >
       <div className="left">
         {" "}
-        <input type="checkbox" />
+        <input type="checkbox" onClick={() => handleCheckAll()} />
         <p>Sort by:</p>
         <select
           className="bg-gray-50 hover:cursor-pointer"
@@ -53,15 +62,6 @@ function SubSetting() {
         )}
       </div>
       <div className="right">
-        <p>Layout: </p>
-        <select
-          className="bg-gray-50 hover:cursor-pointer "
-          name="layout"
-          id="layout"
-        >
-          <option value="table">Table view</option>
-          <option value="card">Card view</option>
-        </select>
         <p>1 - 3 of 3</p>
         <div className="flex">
           <button className="border px-2 hover:cursor-pointer">&lt;</button>
