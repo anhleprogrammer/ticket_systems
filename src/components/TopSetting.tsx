@@ -5,7 +5,10 @@ import {
   AiOutlineNotification,
 } from "react-icons/ai";
 import { BsFilter } from "react-icons/bs";
+import Modal from "./Modal";
+import { useState } from "react";
 function TopSetting() {
+  const [open, setOpen] = useState(false);
   return (
     <div className="px-6 flex justify-between w-full border-b border-gray-200 h-12 items-center p-4 [&>*]:hover:cursor-pointer">
       <div className="flex gap-4 items-center  ">
@@ -15,7 +18,8 @@ function TopSetting() {
 
       <div className="flex gap-4">
         <div className="text-small">
-          <Button name="Add" />
+          <Button name="Add" setState={() => setOpen(true)} />
+          {open && <Modal setClose={setOpen} />}
         </div>
         <div className="text-xl flex gap-4 items-center ">
           <AiOutlineSearch />
