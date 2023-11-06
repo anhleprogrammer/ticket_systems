@@ -5,7 +5,7 @@ import {
   AiOutlineNotification,
 } from "react-icons/ai";
 import { BsFilter } from "react-icons/bs";
-import Modal from "./Modal";
+import CreateTicketModal from "./CreateTicketModal";
 import { useState } from "react";
 function TopSetting() {
   const [open, setOpen] = useState(false);
@@ -19,7 +19,7 @@ function TopSetting() {
       <div className="flex gap-4">
         <div className="text-small">
           <Button name="Add" setState={() => setOpen(true)} />
-          {open && <Modal setClose={setOpen} />}
+          {open && <CreateTicketModal setClose={setOpen} />}
         </div>
         <div className="text-xl flex gap-4 items-center ">
           <AiOutlineSearch />
