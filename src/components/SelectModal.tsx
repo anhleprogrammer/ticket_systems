@@ -14,7 +14,7 @@ function getOptionColor(option: string) {
       return "";
   }
 }
-function Modal({ options, setSelect }: ModalProps) {
+function SelectModal({ options, setSelect }: ModalProps) {
   return (
     <div
       className="flex flex-col w-32 overflow-hidden bg-white right-8.5 top-5 absolute z-10 rounded-md shadow 
@@ -40,4 +40,4 @@ function Modal({ options, setSelect }: ModalProps) {
   );
 }
 
-export default Modal;
+export default SelectModal;

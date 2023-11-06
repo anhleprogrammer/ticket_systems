@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import Modal from "./Modal";
+import SelectModal from "./SelectModal";
 type SelectProps = {
   options: string[];
   value: string;
@@ -58,7 +58,7 @@ function Select({ options, value }: SelectProps) {
         <a>{select}</a>
       </div>
       <img src="arrow_down.svg" className="w-4" />
-      {open && <Modal options={options} setSelect={setSelect} />}
+      {open && <SelectModal options={options} setSelect={setSelect} />}
     </div>
   );
 }

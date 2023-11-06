@@ -20,7 +20,7 @@ type TicketCardProps = {
 function TicketCard({ ticket }: TicketCardProps) {
   const priority_opts = ["Low", "Medium", "High"];
   const status_opts = ["Open", "Pending", "Resolved"];
-  const { ticketsState, setTickets } = useContext(TicketDataContext);
+  const { ticketsState, setTickets, setTicked } = useContext(TicketDataContext);
   const handleCheck = (id: number) => {
     const newTickets = ticketsState.map((ticket: any) => {
       if (ticket.id === id) {
@@ -37,6 +37,9 @@ function TicketCard({ ticket }: TicketCardProps) {
           type="checkbox"
           checked={ticket.checked}
           onChange={() => handleCheck(ticket.id)}
+          onClick={() =>
+            setTicked((prev: any) => ({ ...prev, tickedOne: !prev.tickedOne }))
+          }
         />
 
         <p className="ticket-name w-4 border px-4 py-2 border-black rounded">
