@@ -6,16 +6,24 @@ import Button from "./Button.tsx";
 import { FcGenericSortingAsc, FcGenericSortingDesc } from "react-icons/fc";
 function SubSetting() {
   const { sortOption, setSortOption } = useContext(SortContext);
-  const { ticketsState, setTickets, ticked, setTicked } =
-    useContext(TicketDataContext);
+  const {
+    ticketsState,
+    setTickets,
+    ticked,
+    setTicked,
+    page,
+    setPage,
+    totalPages,
+  } = useContext(TicketDataContext);
   const handleCheckAll = () => {
     const newTickets = ticketsState.map((ticket: any) => ({
       ...ticket,
       checked: !ticket.checked,
     }));
     setTickets(newTickets);
-    setTicked((prev:any) => ({ ...prev, tickedAll: !prev.tickedAll }));
+    setTicked((prev: any) => ({ ...prev, tickedAll: !prev.tickedAll }));
   };
+
   return (
     <div
       className="bg-gray-50 py-4 px-7 flex justify-between
@@ -85,10 +93,32 @@ function SubSetting() {
       </div>
 
       <div className="right">
-        <p>1 - 3 of 3</p>
+        <p>
+          {page} - {totalPages} of {totalPages}
+        </p>
         <div className="flex">
-          <button className="border px-2 hover:cursor-pointer">&lt;</button>
-          <button className="border px-2 hover:cursor-pointer">&gt;</button>
+          <button
+            className="border px-2 hover:cursor-pointer"
+            onClick={() => {
+              setPage((prev: any) => {
+                if (prev > 1) return prev - 1;
+                return prev;
+              });
+            }}
+          >
+            &lt;
+          </button>
+          <button
+            className="border px-2 hover:cursor-pointer"
+            onClick={() => {
+              setPage((prev: any) => {
+                if (prev < totalPages) return prev + 1;
+                return prev;
+              });
+            }}
+          >
+            &gt;
+          </button>
         </div>
         <button className="border px-2 text-xl   hover:cursor-pointer">
           <AiFillFilter />

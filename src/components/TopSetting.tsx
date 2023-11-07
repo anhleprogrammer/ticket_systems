@@ -1,9 +1,5 @@
 import Button from "./Button";
-import {
-  AiOutlineSearch,
-  AiOutlineUser,
-  AiOutlineNotification,
-} from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
 import { BsFilter } from "react-icons/bs";
 import CreateTicketModal from "./CreateTicketModal";
 import { useState } from "react";
@@ -23,7 +19,6 @@ function TopSetting() {
         </div>
         <div className="text-xl flex gap-4 items-center ">
           <AiOutlineSearch />
-          <AiOutlineNotification />
           <div className="border-2 p-1 rounded-full">
             <AiOutlineUser />
           </div>

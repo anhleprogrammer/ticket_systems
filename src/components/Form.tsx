@@ -5,11 +5,12 @@ function Form() {
     <div className="text-sm flex flex-col p-4 gap-4 [&>input]:border [&>input]:p-2 [&>select]:border [&>select]:p-2">
       <div className="flex justify-between items-center text-xl">
         <p className="text-center w-full">Create ticket</p>
-        <AiOutlineCloseCircle className="overlay cursor-pointer closeCircle" />
+
+        <AiOutlineCloseCircle className="overlay cursor-pointer" />
       </div>
 
-      <label htmlFor="contact">Contact</label>
-      <input type="text" id="contact" />
+      <label htmlFor="email">Email</label>
+      <input type="text" id="email" />
 
       <label htmlFor="subject">Subject</label>
       <input type="text " id="subject" />
@@ -30,7 +31,8 @@ function Form() {
       </select>
 
       <label htmlFor="description">Description</label>
-      <textarea className="border p-2 h-44" id="description " />
+      <textarea className="border p-2 grow h-32" id="description " />
+
       <div className="flex gap-4 justify-end m-4">
         <Button name="Submit" />
         <Button name="Cancel" />

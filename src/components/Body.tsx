@@ -9,7 +9,7 @@ const priorityInNumber: { [key: string]: number } = {
 };
 function Body() {
   const { sortOption } = useContext(SortContext);
-  const { ticketsState } = useContext(TicketDataContext);
+  const { ticketsState, page } = useContext(TicketDataContext);
   if (sortOption.option === "priority") {
     ticketsState.sort((a: any, b: any) =>
       sortOption.order === "asc"
@@ -30,11 +30,18 @@ function Body() {
       return sortOption.order === "asc" ? dateB - dateA : dateA - dateB;
     });
   }
+  const handleDisplay = () => {
+    let startInd = (page - 1) * 8;
+    let endInd = startInd + 8;
+    const newTickets = ticketsState.slice(startInd, endInd);
+    return newTickets.map((ticket: any) => (
+      <TicketCard key={newTickets.id} ticket={ticket} />
+    ));
+  };
+  console.log(page);
   return (
     <div className="bg-gray-100 h-full p-4  overflow-auto">
-      {ticketsState.map((ticket: any) => (
-        <TicketCard key={ticketsState.id} ticket={ticket} />
-      ))}
+      {handleDisplay()}
     </div>
   );
 }

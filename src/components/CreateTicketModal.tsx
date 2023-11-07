@@ -2,11 +2,9 @@ import ReactDOM from "react-dom";
 import Form from "./Form";
 function CreateTicketModal({ setClose }: any) {
   const handleClose = (e: any) => {
-    if (
-      e.target.className.includes("overlay") ||
-      e.target.className.includes("closeCircle")
-    )
-      setClose(false);
+    if (e.target.className.baseVal !== undefined) {
+      if (e.target.className.baseVal.includes("overlay")) setClose(false);
+    } else if (e.target.className.includes("overlay")) setClose(false);
   };
   return ReactDOM.createPortal(
     <div
@@ -14,7 +12,7 @@ function CreateTicketModal({ setClose }: any) {
       onClick={handleClose}
     >
       <div className="content w-1/2 h-5/6 bg-white ">
-        <Form />
+        <Form  />
       </div>
     </div>,
     document.getElementById("modal-root") as Element
