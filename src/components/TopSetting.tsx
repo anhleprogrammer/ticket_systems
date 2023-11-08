@@ -12,12 +12,13 @@ function TopSetting() {
         <p className="font-bold">All Tickets</p>
       </div>
 
-      <div className="flex gap-4">
+      <div className="flex gap-4 items-center">
         <div className="text-small">
           <Button name="Add" setState={() => setOpen(true)} />
           {open && <CreateTicketModal setClose={setOpen} />}
         </div>
-        <div className="text-xl flex gap-4 items-center ">
+        <div className="text-xl flex gap-4 items-center">
+          <input className="border rounded px-2 py-1" type="text" />
           <AiOutlineSearch />
           <div className="border-2 p-1 rounded-full">
             <AiOutlineUser />

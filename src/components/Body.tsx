@@ -1,6 +1,6 @@
 import TicketCard from "./TicketCard";
 import { SortContext } from "../contexts/SortContext";
-import { TicketDataContext } from "../contexts/TicketDataContext";
+import { TicketDataContext, Ticket } from "../contexts/TicketDataContext";
 import { useContext } from "react";
 const priorityInNumber: { [key: string]: number } = {
   Low: 0,
@@ -34,8 +34,8 @@ function Body() {
     let startInd = (page - 1) * 8;
     let endInd = startInd + 8;
     const newTickets = ticketsState.slice(startInd, endInd);
-    return newTickets.map((ticket: any) => (
-      <TicketCard key={newTickets.id} ticket={ticket} />
+    return newTickets.map((ticket: Ticket) => (
+      <TicketCard key={ticket.id} ticket={ticket} />
     ));
   };
   console.log(page);

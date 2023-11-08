@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AiFillFilter } from "react-icons/ai";
 import { SortContext } from "../contexts/SortContext";
-import { TicketDataContext } from "../contexts/TicketDataContext";
+import { TicketDataContext, Ticket } from "../contexts/TicketDataContext";
 import Button from "./Button.tsx";
 import { FcGenericSortingAsc, FcGenericSortingDesc } from "react-icons/fc";
 function SubSetting() {
@@ -16,12 +16,15 @@ function SubSetting() {
     totalPages,
   } = useContext(TicketDataContext);
   const handleCheckAll = () => {
-    const newTickets = ticketsState.map((ticket: any) => ({
+    const newTickets = ticketsState.map((ticket: Ticket) => ({
       ...ticket,
       checked: !ticket.checked,
     }));
     setTickets(newTickets);
-    setTicked((prev: any) => ({ ...prev, tickedAll: !prev.tickedAll }));
+    setTicked((prev: any) => ({
+      ...prev,
+      tickedAll: !prev.tickedAll,
+    }));
   };
 
   return (

@@ -9,9 +9,9 @@ function App() {
   return (
     <>
       <div className="flex h-screen overflow-hidden	">
-        <Navbar />
         <TicketDataProvider>
           <SortProvider>
+            <Navbar />
             <div className="w-full">
               <TopSetting />
               <SubSetting />
