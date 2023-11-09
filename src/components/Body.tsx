@@ -34,12 +34,6 @@ function Body() {
     });
   }
 
-  // const handleDisplay = () => {
-  //   let startInd = (page - 1) * 8;
-  //   let endInd = startInd + 8;
-  //   const newTickets = ticketsState.slice(startInd, endInd);
-  // };
-
   useEffect(() => {
     let startInd = (page - 1) * 8;
     let endInd = startInd + 8;
@@ -53,7 +47,7 @@ function Body() {
       );
     }
     setCurTickets(newTickets);
-  }, [searchInput, ticketsState]);
+  }, [searchInput, ticketsState, page]);
   return (
     <div className="bg-gray-100 h-full p-4  overflow-auto">
       {curTickets.map((ticket: Ticket) => (
