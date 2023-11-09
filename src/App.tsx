@@ -4,6 +4,7 @@ import SubSetting from "./components/SubSetting";
 import Body from "./components/Body";
 import { SortProvider } from "./contexts/SortContext";
 import { TicketDataProvider } from "./contexts/TicketDataContext";
+import { SearchContextProvider } from "./contexts/SearchContext";
 
 function App() {
   return (
@@ -11,12 +12,14 @@ function App() {
       <div className="flex h-screen overflow-hidden	">
         <TicketDataProvider>
           <SortProvider>
-            <Navbar />
-            <div className="w-full">
-              <TopSetting />
-              <SubSetting />
-              <Body />
-            </div>
+            <SearchContextProvider>
+              <Navbar />
+              <div className="w-full">
+                <TopSetting />
+                <SubSetting />
+                <Body />
+              </div>
+            </SearchContextProvider>
           </SortProvider>
         </TicketDataProvider>
       </div>

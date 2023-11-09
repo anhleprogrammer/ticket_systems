@@ -1,13 +1,20 @@
-// import { createContext, useState } from "react";
+import { createContext, useState } from "react";
 
-// type searchContextProps = {
-//   input: string;
-//   setInput: (input: string) => void;
-// };
+type searchContextProps = {
+  searchInput: string;
+  setSearchInput: React.Dispatch<React.SetStateAction<string>>;
+};
 
-// export const SearchContext = createContext<searchContextProps>({
-//   input: "",
-//   setInput: () => {},
-// });
+export const SearchContext = createContext<searchContextProps>({
+  searchInput: "",
+  setSearchInput: () => {},
+});
 
-// export const SearchContextProvider = ({ children }: any) => {};
+export const SearchContextProvider = ({ children }: any) => {
+  const [searchInput, setSearchInput] = useState("");
+  return (
+    <SearchContext.Provider value={{ searchInput, setSearchInput }}>
+      {children}
+    </SearchContext.Provider>
+  );
+};
