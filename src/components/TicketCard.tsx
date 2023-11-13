@@ -1,23 +1,14 @@
 import Select from "./Select";
 import dateUtils from "../utils/dateUtils.tsx";
-import { TicketDataContext } from "../contexts/TicketDataContext";
-import { useContext } from "react";
-type Ticket = {
-  id: number;
-  name: string;
-  subject: string;
-  created: string;
-  status: string;
-  priority: string;
-  description: string;
-  agent: string;
-  checked: boolean;
-};
+import { TicketDataContext, Ticket } from "../contexts/TicketDataContext";
+import { useContext, useState } from "react";
+import OpenTicketModal from "./OpenTicketModal";
 
 type TicketCardProps = {
   ticket: Ticket;
 };
 function TicketCard({ ticket }: TicketCardProps) {
+  const [open, setOpen] = useState(false);
   const priority_opts = ["Low", "Medium", "High"];
   const status_opts = ["Open", "Pending", "Resolved"];
   const { ticketsState, setTickets, setTicked } = useContext(TicketDataContext);
@@ -30,9 +21,15 @@ function TicketCard({ ticket }: TicketCardProps) {
     });
     setTickets(newTickets);
   };
+  const openTicket = () => {
+    setOpen(true);
+  };
   return (
     <div className="card flex text-sm justify-between  p-4 bg-white mb-2">
-      <div className="flex justify-between gap-4 text-sm items-center">
+      <div
+        className="flex justify-between gap-4 text-sm items-center cursor-pointer"
+        onClick={openTicket}
+      >
         <input
           type="checkbox"
           checked={ticket.checked}
@@ -66,6 +63,13 @@ function TicketCard({ ticket }: TicketCardProps) {
           <Select options={status_opts} value={ticket.status} />
         </div>
       </div>
+      {open && (
+        <OpenTicketModal
+          setClose={setOpen}
+          messages={ticket.messages}
+          name={ticket.name}
+        />
+      )}
     </div>
   );
 }

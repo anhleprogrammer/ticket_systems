@@ -1,6 +1,5 @@
 import Button from "./Button";
 import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
-import { BsFilter } from "react-icons/bs";
 import CreateTicketModal from "./CreateTicketModal";
 import { useState, useContext } from "react";
 import { SearchContext } from "../contexts/SearchContext";
@@ -13,7 +12,6 @@ function TopSetting() {
   return (
     <div className="px-6 flex justify-between w-full border-b border-gray-200 h-12 items-center p-4 [&>*]:hover:cursor-pointer">
       <div className="flex gap-4 items-center  ">
-        <BsFilter className="border-2 text-2xl rounded" />
         <p className="font-bold">All Tickets</p>
       </div>
 

@@ -8,6 +8,13 @@ const tickets = [
     priority: "Low",
     description: "I cannot see my order, please assist me",
     agent: "Anh Le",
+    messages: [
+      {
+        message: "I cannot see my order, can you check it for me please?",
+        timestamp: "11/1/2023",
+        reply: "No worry, let me double check it for you.",
+      },
+    ],
   },
   {
     id: 2,
@@ -18,6 +25,13 @@ const tickets = [
     priority: "High",
     description: "I need assist with changing email address",
     agent: "Anh Le",
+    messages: [
+      {
+        message: "I cannot change my email address",
+        timestamp: "11/1/2023",
+        reply: "Let me help you with that.",
+      },
+    ],
   },
   {
     id: 3,
@@ -28,6 +42,13 @@ const tickets = [
     priority: "Medium",
     description: "I cannot process my payment",
     agent: "Anh Le",
+    messages: [
+      {
+        message: "Can you help with my payment issue, please?",
+        timestamp: "11/1/2023",
+        reply: "Absolutely.",
+      },
+    ],
   },
   {
     id: 4,
@@ -38,6 +59,13 @@ const tickets = [
     priority: "Low",
     description: "My order has missing items",
     agent: "Anh Le",
+    messages: [
+      {
+        message: "I don't know why my order missing 2 items?",
+        timestamp: "11/1/2023",
+        reply: "It's ok, let me send you another one.",
+      },
+    ],
   },
   {
     id: 5,
@@ -48,6 +76,13 @@ const tickets = [
     priority: "Low",
     description: "My order has missing items",
     agent: "Anh Le",
+    messages: [
+      {
+        message: "I don't know why my order missing 2 items?",
+        timestamp: "11/1/2023",
+        reply: "Could you share your order number, please?",
+      },
+    ],
   },
   {
     id: 6,
@@ -58,6 +93,13 @@ const tickets = [
     priority: "Medium",
     description: "My package is delayed, need assistance",
     agent: "Jessica Smith",
+    messages: [
+      {
+        message: "Hi Anh, my package is delayed",
+        timestamp: "11/1/2023",
+        reply: "Could you share your order number, please?",
+      },
+    ],
   },
   {
     id: 7,
@@ -68,6 +110,13 @@ const tickets = [
     priority: "High",
     description: "I received the wrong item in my order",
     agent: "Michael Johnson",
+    messages: [
+      {
+        message: "Hi Anh, I received the wrong item",
+        timestamp: "11/1/2023",
+        reply: "It's fine, I can replace it for you.",
+      },
+    ],
   },
   {
     id: 8,
@@ -78,6 +127,15 @@ const tickets = [
     priority: "Medium",
     description: "There is a discrepancy in my bill, need clarification",
     agent: "Emily Thompson",
+    messages: [
+      {
+        message:
+          "Hi Anh, there is a discrepancy in my bill, need clarification",
+        timestamp: "11/1/2023",
+        reply:
+          "I will connect with the billing team and get back to you as soon as possible.",
+      },
+    ],
   },
   {
     id: 9,
@@ -88,6 +146,13 @@ const tickets = [
     priority: "Low",
     description: "I would like to initiate a return for my purchase",
     agent: "Daniel Miller",
+    messages: [
+      {
+        message: "Hi Anh, I would like to initiate a return for my purchase",
+        timestamp: "11/1/2023",
+        reply: "Could you share your order number, please?",
+      },
+    ],
   },
   {
     id: 10,
@@ -98,6 +163,13 @@ const tickets = [
     priority: "Medium",
     description: "I am unable to access my account, need assistance",
     agent: "Emma Wilson",
+    messages: [
+      {
+        message: "Hi Anh, I am unable to access my account, need assistance",
+        timestamp: "11/1/2023",
+        reply: "Let me connect you with the IT support team.",
+      },
+    ],
   },
   {
     id: 11,
@@ -108,6 +180,13 @@ const tickets = [
     priority: "High",
     description: "The product I received is defective, need a replacement",
     agent: "Benjamin Davis",
+    messages: [
+      {
+        message: "The product I received is defective, need a replacement",
+        timestamp: "11/1/2023",
+        reply: "It's fine, I can replace it for you.",
+      },
+    ],
   },
 ];
 

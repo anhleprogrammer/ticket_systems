@@ -1,6 +1,11 @@
 import { createContext, useState } from "react";
 import { tickets } from "../data/tickets";
 
+export type messageType = {
+  message: string;
+  timestamp: string;
+  reply: string;
+};
 export type Ticket = {
   id: number;
   name: string;
@@ -11,6 +16,7 @@ export type Ticket = {
   description: string;
   agent: string;
   checked: boolean;
+  messages: messageType[];
 };
 
 type tickedType = {

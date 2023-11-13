@@ -8,11 +8,11 @@ function CreateTicketModal({ setClose }: any) {
   };
   return ReactDOM.createPortal(
     <div
-      className="overlay h-screen fixed w-full flex items-center justify-center bg-slate-300 bg-opacity-50 z-20"
+      className="overlay h-screen fixed w-full flex items-center justify-center bg-slate-800 bg-opacity-50 z-20"
       onClick={handleClose}
     >
       <div className="content w-1/2 h-5/6 bg-white ">
-        <Form  />
+        <Form />
       </div>
     </div>,
     document.getElementById("modal-root") as Element
