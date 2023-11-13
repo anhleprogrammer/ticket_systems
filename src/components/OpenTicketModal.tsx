@@ -11,13 +11,13 @@ function OpenTicketModal({ setClose, messages, name }: OpenTicketModalProps) {
   const handleClose = (e: any) => {
     if (e.target.className.includes("overlay")) setClose(false);
   };
-  console.log(messages);
+
   return ReactDOM.createPortal(
     <div
       className="overlay h-screen fixed w-full flex items-center justify-end bg-slate-800 bg-opacity-50 z-20"
       onClick={handleClose}
     >
-      <div className="w-1/2 h-full bg-slate-100 p-4">
+      <div className="w-1/2 h-full bg-slate-100 p-4 overflow-hidden">
         <div className="flex gap-2 mb-8">
           <QuickreplyIcon />
           <p>Quick response</p>
