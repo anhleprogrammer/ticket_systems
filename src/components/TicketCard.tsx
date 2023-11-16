@@ -26,10 +26,7 @@ function TicketCard({ ticket }: TicketCardProps) {
   };
   return (
     <div className="card flex text-sm justify-between  p-4 bg-white mb-2">
-      <div
-        className="flex justify-between gap-4 text-sm items-center cursor-pointer"
-        onClick={openTicket}
-      >
+      <div className="flex justify-between gap-4 text-sm items-center cursor-pointer">
         <input
           type="checkbox"
           checked={ticket.checked}
@@ -43,7 +40,7 @@ function TicketCard({ ticket }: TicketCardProps) {
           {ticket.name.charAt(0)}
         </p>
 
-        <div>
+        <div onClick={openTicket}>
           <p className="hover:cursor-pointer">
             {ticket.subject} <a>#{ticket.id}</a>
           </p>

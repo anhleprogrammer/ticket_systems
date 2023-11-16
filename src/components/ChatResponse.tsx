@@ -1,4 +1,5 @@
-import ChatTextArea from "./ChatTextArea";
+// import ChatTextArea from "./ChatTextArea";
+import MyEditor from "./MyEditor";
 type CharResponseProps = {
   message: string;
   timestamp: string;
@@ -25,7 +26,8 @@ function ChatResponse({ message, timestamp, name, reply }: CharResponseProps) {
           </div>
           <p>{reply}</p>
         </div>
-        <ChatTextArea />
+        {/* <ChatTextArea /> */}
+        <MyEditor />
       </div>
     </div>
   );
