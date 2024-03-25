@@ -12,7 +12,8 @@ const tickets = [
       {
         message: "I cannot see my order, can you check it for me please?",
         timestamp: "11/1/2023",
-        reply: "No worry, let me double check it for you.",
+        reply:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
     ],
   },
@@ -29,7 +30,8 @@ const tickets = [
       {
         message: "I cannot change my email address",
         timestamp: "11/1/2023",
-        reply: "Let me help you with that.",
+        reply:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
     ],
   },
@@ -46,7 +48,8 @@ const tickets = [
       {
         message: "Can you help with my payment issue, please?",
         timestamp: "11/1/2023",
-        reply: "Absolutely.",
+        reply:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
     ],
   },
@@ -63,7 +66,8 @@ const tickets = [
       {
         message: "I don't know why my order missing 2 items?",
         timestamp: "11/1/2023",
-        reply: "It's ok, let me send you another one.",
+        reply:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
     ],
   },
@@ -80,7 +84,8 @@ const tickets = [
       {
         message: "I don't know why my order missing 2 items?",
         timestamp: "11/1/2023",
-        reply: "Could you share your order number, please?",
+        reply:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
     ],
   },
@@ -95,9 +100,10 @@ const tickets = [
     agent: "Jessica Smith",
     messages: [
       {
-        message: "Hi Anh, my package is delayed",
+        message: "Hi, my package is delayed",
         timestamp: "11/1/2023",
-        reply: "Could you share your order number, please?",
+        reply:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
     ],
   },
@@ -114,7 +120,8 @@ const tickets = [
       {
         message: "Hi Anh, I received the wrong item",
         timestamp: "11/1/2023",
-        reply: "It's fine, I can replace it for you.",
+        reply:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
     ],
   },
@@ -133,7 +140,7 @@ const tickets = [
           "Hi Anh, there is a discrepancy in my bill, need clarification",
         timestamp: "11/1/2023",
         reply:
-          "I will connect with the billing team and get back to you as soon as possible.",
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
     ],
   },
@@ -148,7 +155,7 @@ const tickets = [
     agent: "Daniel Miller",
     messages: [
       {
-        message: "Hi Anh, I would like to initiate a return for my purchase",
+        message: "Hi, I would like to initiate a return for my purchase",
         timestamp: "11/1/2023",
         reply: "Could you share your order number, please?",
       },
@@ -165,9 +172,10 @@ const tickets = [
     agent: "Emma Wilson",
     messages: [
       {
-        message: "Hi Anh, I am unable to access my account, need assistance",
+        message: "Hi, I am unable to access my account, need assistance",
         timestamp: "11/1/2023",
-        reply: "Let me connect you with the IT support team.",
+        reply:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
     ],
   },
@@ -184,7 +192,8 @@ const tickets = [
       {
         message: "The product I received is defective, need a replacement",
         timestamp: "11/1/2023",
-        reply: "It's fine, I can replace it for you.",
+        reply:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
     ],
   },
